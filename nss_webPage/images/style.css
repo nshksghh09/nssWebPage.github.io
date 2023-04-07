@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather', sans-serif, serif;
+}
+/* body {
+  background-image: linear-gradient(120deg, #8eb5f5 0%, #c8dde7 100%);
+} */
+.wrapper {
+  width: 98%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+}
+.logo-for-right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu-socialIcons {
+  position: sticky;
+
+  top: 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2vw;
+}
+.menu {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: 300;
+}
+h1 {
+  font-size: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+ul li {
+  text-decoration: none;
+  list-style: none;
+  padding: 1vw;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social img {
+  width: 30px;
+  height: auto;
+}
+.social img:hover {
+  scale: 0.8;
+  opacity: 0.7;
+}
+.about {
+  height: 140vh;
+  padding: 4vw 12vw 4vw 12vw;
+}
+.about p {
+  text-align: justify;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.intro-img {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  padding-bottom: 20px;
+}
+.intro-img img {
+  width: 80%;
+  height: auto;
+}
+.read-more {
+  color: blue;
+}
+.welcome-para {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin: 2vw;
+  padding: 62px 10px 10px;
+  gap: 2vh;
+  padding-bottom: 0;
+  height: 60vh;
+  border-bottom: 1px solid gray;
+}
+.welcome-text {
+  position: relative;
+  top: 0;
+  color: rgb(28, 28, 223);
+}
+.bottom-blue-layer {
+  background-color: rgb(22, 22, 170);
+  color: white;
+  padding: 10px;
+}
+.bottom-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-links li {
+  padding: 0 5px 0 5px;
+}
+.organisation {
+  height: 107vh;
+}
+.footer-wrapper {
+  background-color: #091235;
+  color: rgb(197, 173, 173);
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+.nitc-img {
+  padding: 0 20px;
+}
+.pic-case {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.case1 {
+  border-bottom: 1px solid gray;
+}
+.org {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper-border {
+  width: 80%;
+  border-bottom: gray;
+}
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+}
+.carousel {
+  height: 65vh;
+  position: relative;
+  top: 0vh;
+}
+.carousel ul {
+  margin: 0;
+  padding: 0;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide[data-active] {
+  transition-delay: 0ms;
+  z-index: 1;
+}
+.slide img {
+  display: block;
+  width: 100%;
+  height: 64vh;
+}
+.slide[data-active] {
+  opacity: 1;
+}
+.carousel-button {
+  width: 4vw;
+  height: 5vh;
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, -5);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background-color: rgb(144, 129, 129, 0.6);
+}
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.prev {
+  left: 1rem;
+}
+
+.next {
+  right: 1rem;
+}
+@media screen and (max-width: 844px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 502px) {
+  html {
+    font-size: 10px;
+  }
+  .logo-for-right {
+    display: flex;
+    flex-direction: column;
+  }
+  .social img {
+    width: 19px;
+    height: auto;
+  }
+  .nitc-img {
+    padding: 20px 0px;
+  }
+  .pic-case {
+    flex-direction: column;
+  }
+  .case1 {
+    padding-right: 60px;
+  }
+  .org-head {
+    font-size: 40px;
+  }
+  .organisation {
+    height: 170vh;
+  }
+  .about {
+    height: 74vh;
+  }
+  .carousel {
+    top: 1vh;
+  }
+  .main-menu {
+    font-size: 20px;
+  }
+}
